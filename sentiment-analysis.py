@@ -97,18 +97,45 @@ from nltk import tokenize
 # In[14]:
 
 
-sentence = "This is a terrible test"
+def analyze_sentence(fsentence):
+    sid = SentimentIntensityAnalyzer()
+    print(fsentence)
+    ss = sid.polarity_scores(fsentence)
+    for k in sorted(ss):
+        print('{0}: {1}, '.format(k, ss[k]), end='')
+    print()
+
+
+# In[ ]:
+
+
+from fastapi import FastAPI
+
+
+# In[ ]:
+
+
+app = FastAPI()
+
+
+# In[ ]:
+
+
+@app.get("/")
+async def root():
+    analyze_sentence("This is a fantastic test")
 
 
 # In[15]:
 
 
-sid = SentimentIntensityAnalyzer()
-print(sentence)
-ss = sid.polarity_scores(sentence)
-for k in sorted(ss):
-    print('{0}: {1}, '.format(k, ss[k]), end='')
-print()
+
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:

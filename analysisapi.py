@@ -18,7 +18,8 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    with open("sentiment-analysis.py") as f:
+        exec(f.read())
 
 
 # In[ ]:
