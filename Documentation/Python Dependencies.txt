@@ -1,2 +1,3 @@
 NLTK: https://www.nltk.org/install.html
 NLTK Data: https://www.nltk.org/data.html
+FastAPI[all]: https://fastapi.tiangolo.com/tutorial/
