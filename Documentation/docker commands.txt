@@ -1,0 +1,2 @@
+docker build --tag docker-analyzer
+docker run -d --name analyzer -p 5000:8000 docker-analyzer
