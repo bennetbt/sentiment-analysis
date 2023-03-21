@@ -5,6 +5,8 @@
 
 
 import nltk
+nltk.download('subjectivity')
+nltk.download('vader_lexicon')
 
 
 # In[5]:
