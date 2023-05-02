@@ -35,6 +35,7 @@ subj_docs[0]
 
 # In[8]:
 
+# BTB Was Here
 
 train_subj_docs = subj_docs[:80]
 test_subj_docs = subj_docs[80:100]
